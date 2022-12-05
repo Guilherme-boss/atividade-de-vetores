@@ -277,4 +277,517 @@ int main(){
     {
         printf("o pior aluno na materia  %d foi %d com %d\n",i,aluno[i],ruimNota[i]);
     }
-    
+   
+   
+   
+   //Lista 1 de C - Structs 
+
+Questão 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	struct cadastros{
+		
+    	char nome[80];
+    	char endereco[80];
+    	char telefone[12];
+    	
+ 	};
+	 struct cadastros pessoa[3];
+	 
+	 int i,j;
+	 
+	for(i = 0; i <= 2; i++){
+	
+		printf("\n---------- Cadastro de Pessoa -----------\n");
+		printf("\n Digite seu nome: \n");
+		scanf("%[^\n]%*c",pessoa[i].nome);
+		printf("\n Digite seu endereço \n");
+		scanf("%[^\n]%*c",pessoa[i].endereco);
+		printf("\n Digite seu telefone \n");
+		scanf("%[^\n]%*c", pessoa[i].telefone);
+	 
+    }
+	for( j = 0; j <= 2; j++){
+		
+		printf("\n---------- Cadastro %i -----------\n",i);
+		printf("Nome: %s \n",pessoa[j].nome);
+		printf("Endereço: %s \n",pessoa[j].endereco);
+		printf("Telefone: %s \n",pessoa[j].telefone);
+		printf("\n----------------------------------\n");
+	}
+	 
+	
+	return 0;
+}
+
+
+
+questão 2:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	struct DadosAlunos{
+		
+    	char nome[80];
+    	char idade[5];
+    	
+ 	};
+	struct DadosAlunos DadosAluno;
+
+
+	printf("\n Digite seu nome: \n");
+	scanf("%[^\n]%*c",DadosAluno.nome);
+	printf("\n Digite sua idade \n");
+	scanf("%[^\n]%*c",DadosAluno.idade);
+
+	printf("Nome: %s \n",DadosAluno.nome);
+	printf("Idade: %s \n",DadosAluno.idade);
+
+	return 0;
+}
+
+Questão 3:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	struct produto{
+		
+    	char nome[10];
+    	int codigo;
+    	
+ 	};
+	struct produto dadosproduto;
+	
+
+	return 0;
+}
+
+questão 4:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct cadastroV{
+		
+	char marca[20];
+    char modelo[20];
+    char cor[20];
+    char qtdportas[20];
+    char motorizacao[20];
+    	
+};struct cadastroV dadosV[10];
+
+void Cveiculo(){
+	
+	struct cadastroV dadosV[10];
+	int i;
+	 
+	for(i = 0; i < 9; i++){
+	
+		printf("\n---------- Cadastro de Veículo -----------\n");
+		printf("\n Digite a marca: \n");
+		scanf("%[^\n]%*c",dadosV[i].marca);
+		printf("\n Digite o modelo \n");
+		scanf("%[^\n]%*c",dadosV[i].modelo);
+		printf("\n Digite a cor \n");
+		scanf("%[^\n]%*c", dadosV[i].cor);
+		printf("\n Digite a motorização: \n");
+		scanf("%[^\n]%*c", dadosV[i].motorizacao);
+		printf("\n Digite a Quantidade de portas \n");
+		scanf("%[^\n]%*c", dadosV[i].qtdportas);
+	 	printf("\n------------------------------------------\n");
+    }
+	
+}
+
+void MostrarV(){
+	
+	struct cadastroV dadosV[10];
+	int j;
+	 
+	for(j = 0; j < 9; j++){
+	
+		printf("\n---------- Cadastro de Veículo %i-----------\n");
+		printf("\n Marca: %s \n",dadosV[j].marca);
+		printf("\n Modelo: %s \n",dadosV[j].modelo);
+		printf("\n Cor %s \n",dadosV[j].cor);
+		printf("\n Motorização: %s\n",dadosV[j].motorizacao);
+		printf("\n Quantidade de portas: %s \n",dadosV[j].qtdportas);
+	 	printf("\n--------------------------------------------\n");
+    }
+	
+	
+}
+void Cveiculo();
+void MostrarV();
+void menu(){
+	
+	int cod;
+	
+	Prinf("Digite : \n 1 - Para Cadastrar seus veículo\n 2 - Para mostrar o cadastro dos seus veículos\n");
+	scanf("%i", & cod);
+	
+	switch(cod){
+		
+		case 1:
+			
+			Cveiculo();
+			menu();
+			
+		case 2:
+			
+			MostrarV();
+			menu();
+			
+		default:
+		
+			printf("Digite uma opcao valida !!!\n");
+			menu();
+		case 0:
+		
+		break;
+			
+	}
+		
+	
+	
+}
+void Cveiculo();
+void MostrarV();
+void menu();
+int main(int argc, char *argv[]) {
+	
+
+	
+	menu();
+	
+	
+	return 0;
+}
+
+Questão 5:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	struct vetores{
+		
+		int a;
+		int b;
+		int c;
+		
+	};
+	
+	struct vetores vetor[1];
+	
+	int somaVa,somaVb,somaVc;
+	
+		printf("\n---------- Cadastro do Vetor 1 para somar -----------\n");
+		printf("\n Coordenada A : \n");
+		scanf("%i", & vetor[0].a);
+		printf("\n Coordenada B : \n");
+		scanf("%i", & vetor[0].b);
+		printf("\n Coordenada C : \n");
+		scanf("%i", & vetor[0].c);	
+	
+		
+		printf("\n---------- Cadastro do Vetor 2 para somar -----------\n");
+		printf("\n Coordenada A : \n");
+		scanf("%i", & vetor[1].a);
+		printf("\n Coordenada B : \n");
+		scanf("%i", & vetor[1].b);
+		printf("\n Coordenada C : \n");
+		scanf("%i", & vetor[1].c);	
+		printf("\n-----------------------------------------------------\n");
+	
+	somaVa = (vetor[0].a+vetor[1].a);
+	somaVb = (vetor[0].b+vetor[1].b);
+	somaVc = (vetor[0].c+vetor[1].c);
+	printf("O resultado da soma dos seus vetores é: (%i,%i,%i)", somaVa,somaVb,somaVc);
+	
+	return 0;
+}
+
+
+
+//Lista 2: funções;
+
+
+Questão 1:
+
+#include <stdio.h>
+#include <stdlib.h>
+void qualomaior(n1,n2){
+	
+	if(n1  > n2){
+		
+		printf("O %i é o maior!!! \n",n1);
+		
+	}
+	if(n2 > n1){
+		
+	printf("O %i é o maior!!! \n",n2);
+		
+	}
+	if(n1 == n2){
+		
+	printf("Os números são iguais!!! \n");
+		
+		
+	}
+	
+}
+void qualomaior(n1,n2);
+int main(int argc, char *argv[]) {
+	
+	int n1,n2;
+	
+	printf("Digite um número: \n");
+	scanf("%i", & n1);
+	printf("Digite outro número: \n");
+	scanf("%i", & n2);
+	
+	qualomaior(n1,n2);
+	
+	return 0;
+}
+
+questão 2:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void qualomes(n1){
+	
+	if(n1 == 1){
+		
+		printf("Janeiro \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 2){
+		
+		printf("Fevereiro \n");
+		printf(" Possui 28 dias (Exceto em ano bixexto, nesse caso possui  29 dias) \n");
+	
+	}
+	if(n1 == 3){
+		
+		printf("Março \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 4){
+		
+		printf("Abril \n");
+		printf(" Possui 30 dias \n");
+	
+	}
+	if(n1 == 5){
+		
+		printf("Maio \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 6){
+		
+		printf("Junho \n");
+		printf(" Possui 30 dias \n");
+	
+	}
+	if(n1 == 7){
+		
+		printf("Julho \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 8){
+		
+		printf("Agosto \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 9){
+		
+		printf("Setembro \n");
+		printf(" Possui 30 dias \n");
+	
+	}
+	if(n1 == 10){
+		
+		printf("Outubro \n");
+		printf(" Possui 31 dias \n");
+	
+	}
+	if(n1 == 11){
+		
+		printf("Novembro \n");
+		printf(" Possui 30 dias \n");
+	
+	}
+	if(n1 == 12){
+		
+		printf("Dezembro \n");
+		printf(" Possui 31 dias \n");
+	
+	}		
+}
+
+
+void qualomes(n1);
+int main(int argc, char *argv[]) {
+	
+	int n1;
+	
+	printf("Digite um número: \n");
+	scanf("%i", & n1);
+	
+	qualomes(n1);
+	
+	
+	return 0;
+}
+
+Questão 3:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void convercaoC(F){
+	
+	float c;
+	
+	c = ((F - 32.0)*(5.0/9.0));
+	
+	printf("Esse valor em celsius eh: %.2f \n", c);
+	
+}
+
+
+void covercaoC(F);
+int main(int argc, char *argv[]) {
+	
+	float F;
+	
+	printf("Digite a temperatura em Fahrenheit que deseja converter para Celsius: \n");
+	scanf("%f", & F);
+	
+	convercaoC(F);	
+	
+	return 0;
+}
+
+Questão 4: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void volume(altura,raio){
+	
+	float v;
+	
+	v = (3.1414592*(raio*raio)*altura);
+	
+	printf("O volume do seu cilindro eh: %.2f \n",v);
+	
+}
+
+
+void volume(altura,raio);
+int main(int argc, char *argv[]) {
+	
+	float altura,raio;
+	
+	printf("Para calcular o volume do seu cilindro digite sua altura: \n");
+	scanf("%f", & altura);
+	printf("Agora digite o raio do seu cilindro: \n");
+	scanf("%f", & raio);
+	
+	volume(altura,raio);	
+	
+	return 0;
+}
+
+Questão 5:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void volume(raio){
+	
+	long double v;
+	
+	v = 4/ (3*3.1414592 * (raio*raio*raio));
+	
+	printf("O volume da sua esfera eh: %.2e \n",v);
+	
+}
+
+
+void volume(raio);
+int main(int argc, char *argv[]) {
+	
+	long double raio;
+	
+	printf("Para calcular o volume da sua esfera o digite seu raio: \n");
+	scanf("%e", & raio);
+
+	
+	volume(raio);	
+	
+	return 0;
+}
+
+Questão 6:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+void imc(peso,altura){
+	
+	float IMC;
+	
+	IMC = peso/(altura*altura);
+	
+	printf("O seu peso ideal é: %.2f \n",IMC);
+	
+}
+
+
+void imc(peso,altura);
+int main(int argc, char *argv[]) {
+	
+	float peso, altura;
+	
+	printf("Para calcularmos seu peso ideal você precisa digitar a seu peso: \n");
+	scanf("%f", & peso);
+	printf("E agora a sua altura: \n");
+	scanf("%f", & altura);
+	
+	imc(peso,altura);	
+	
+	return 0;
+}
